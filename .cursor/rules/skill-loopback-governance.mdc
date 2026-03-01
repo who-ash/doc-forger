@@ -1,0 +1,21 @@
+---
+description: Capture successful patterns and prevent repeated mistakes through documentation and controlled skill updates.
+alwaysApply: true
+---
+
+# Skill Loopback Governance
+
+## After Significant Fixes
+- Update `docs/documentation-manager/lessons-learned.md`.
+- Update or add a command log entry under `docs/documentation-manager/commands/`.
+
+## Skill Update Policy
+- Do not silently rewrite broad skills on every task.
+- When a repeated pattern or mistake is identified:
+  1) propose a focused skill/rule update
+  2) apply update after user confirmation
+
+## Anti-Regression Focus
+- Capture root cause and prevention rule.
+- Keep prevention rules concise and actionable.
+- Link updates to affected case docs (`admin`, `user`, `organization`) when relevant.

@@ -1,0 +1,24 @@
+---
+description: Enforce command logs, lessons learned, and case-grouped documentation updates.
+alwaysApply: true
+---
+
+# Documentation Manager Rule
+
+## Required After Meaningful Changes
+- Add a command log entry in `docs/documentation-manager/commands/`.
+- Update `docs/documentation-manager/lessons-learned.md` when mistakes or corrections occurred.
+- Update relevant case docs under `docs/documentation-manager/cases/`:
+  - `admin/`
+  - `user/`
+  - `organization/`
+
+## Command Log Requirements
+- Record key commands that changed setup, schema, auth, UI, or migrations.
+- Include purpose and outcome for each command.
+- Do not include secrets, tokens, or private keys in logs.
+
+## Case Documentation Requirements
+- Keep each case file practical and implementation-focused.
+- Note scope, routes, data model usage, and next steps.
+- Reflect current state, not aspirational state.

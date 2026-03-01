@@ -1,8 +1,17 @@
+import { redirect } from "next/navigation";
+import { getRequiredSession, getUserOrganizations } from "@/lib/auth-guards";
 
-export default function Home() {
-  return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  );
+export default async function IndexPage() {
+  const { dbUser } = await getRequiredSession();
+  const organizations = await getUserOrganizations(dbUser.id);
+
+  if (dbUser.appRole === "admin") {
+    redirect("/admin");
+  }
+
+  if (organizations.length === 0) {
+    redirect("/onboarding/organization");
+  }
+
+  redirect("/home");
 }

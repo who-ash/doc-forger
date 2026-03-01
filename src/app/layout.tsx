@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Toaster } from "@/components/ui/sonner";
+import { APP_ICON_PATH, APP_ICON_TYPE } from "@/lib/icons";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -44,9 +46,9 @@ export const metadata: Metadata = {
     description: appDescription,
   },
   icons: {
-    icon: [{ url: "/icons/icon.svg", type: "image/svg+xml" }],
-    shortcut: "/icons/icon.svg",
-    apple: [{ url: "/icons/icon.svg", type: "image/svg+xml" }],
+    icon: [{ url: APP_ICON_PATH, type: APP_ICON_TYPE }],
+    shortcut: APP_ICON_PATH,
+    apple: [{ url: APP_ICON_PATH, type: APP_ICON_TYPE }],
   },
   manifest: "/site.webmanifest",
 };
@@ -67,6 +69,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Toaster position="top-right" richColors />
       </body>
     </html>
   );
