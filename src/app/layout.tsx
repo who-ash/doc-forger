@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 const appName = "Doc Forger";
-const appDescription = "Create, edit, and manage documents in one place.";
+const appDescription = "DocForge is an AI-powered documentation engine that transforms your codebase into living, searchable documentation.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(

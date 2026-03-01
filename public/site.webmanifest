@@ -1,7 +1,7 @@
 {
   "name": "Doc Forger",
   "short_name": "DocForger",
-  "description": "Create, edit, and manage documents in one place.",
+  "description": "DocForge is an AI-powered documentation engine that transforms your codebase into living, searchable documentation.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
